@@ -5,13 +5,14 @@
   - [ ] [Stack Views](https://www.raywenderlich.com/114552/uistackview-tutorial-introducing-stack-views)
   
 ## SDK Components
-  - [ ] UIActivityIndicatorView
+  - [x] UIActivityIndicatorView
   - [ ] UITableView
   - [ ] Collection Views
   
 ## Navigation
   - [ ] UINavigationController
   - [ ] [Multiple Storyboard](https://code.tutsplus.com/tutorials/ios-9-staying-organized-with-storyboard-references--cms-24226)
+  - [x] [Connecting View Controllers](https://talk.objc.io/episodes/S01E05-connecting-view-controllers)
 
 ## Architecture/Patterns
   - [x] [Viper Architecture](https://www.ckl.io/blog/ios-project-architecture-using-viper/)
