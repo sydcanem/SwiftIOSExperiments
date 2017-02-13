@@ -52,7 +52,10 @@ extension LoadingAuthentication where Self: UIViewController {
 				self?.failed(error)
 			}
 
-			self?.spinner.stopAnimating()
+      DispatchQueue.main.async {
+        self?.spinner.stopAnimating()
+      }
+    
 		})
 	}
 }
