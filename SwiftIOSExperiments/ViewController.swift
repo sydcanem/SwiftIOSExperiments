@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, LoginValidation {
+class ViewController: UIViewController, LoginValidation, LoadingAuthentication {
+	let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 
 	@IBOutlet var email: UITextField!
 	@IBOutlet var password: UITextField!
@@ -18,6 +19,11 @@ class ViewController: UIViewController, LoginValidation {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+		spinner.hidesWhenStopped = true
+		spinner.center = view.center
+
+		view.addSubview(spinner)
     }
 
 	@IBAction func login(_ button: UIButton) {
@@ -37,17 +43,18 @@ class ViewController: UIViewController, LoginValidation {
 				emailValidationMessage = nil
 				passwordValidationMessage = nil
 			} else {
-				AuthService.authenticate(email, password, completion: { result in
-					switch result {
-					case .success(let credentials):
-						guard let idToken = credentials.idToken else { return }
+				let resource = Auth(email: email, password: password)
 
-						print("Successfully logged-in: \(idToken)")
-					case .failure(let error):
-						print("Error: \(error)")
-					}
-				})
+				authenticate(auth: resource)
 			}
 		}
+	}
+
+	func success(_ token: String) {
+		print("Token: \(token)")
+	}
+
+	func failed(_ error: Any) {
+		print("Error: \(error)")
 	}
 }
