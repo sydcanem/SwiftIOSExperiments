@@ -11,7 +11,7 @@ import Auth0
 
 class AuthService {
 	static func authenticate(_ email: String, _ password: String,
-	                         completion: @escaping (_ result: Result<Credentials>) -> ()) {
+	                         completion: @escaping (_ result: Result<Credentials>) -> Void) {
 		Auth0
 			.authentication()
 			.login(
@@ -20,6 +20,5 @@ class AuthService {
 				connection: "Username-Password-Authentication"
 			)
 			.start(completion)
-		
 	}
 }
