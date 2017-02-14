@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, LoginValidation, LoadingAuthentication {
+class LoginViewController: UIViewController, LoginValidation, LoadingAuthentication {
 	let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+	var presenter: LoginPresenter!
 
 	@IBOutlet var email: UITextField!
 	@IBOutlet var password: UITextField!
@@ -17,14 +18,14 @@ class ViewController: UIViewController, LoginValidation, LoadingAuthentication {
 	var emailValidationMessage: String?
 	var passwordValidationMessage: String?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 
 		spinner.hidesWhenStopped = true
 		spinner.center = view.center
 
 		view.addSubview(spinner)
-    }
+	}
 
 	@IBAction func login(_ button: UIButton) {
 		if let email: String = email.text, let password: String = password.text {
@@ -52,6 +53,7 @@ class ViewController: UIViewController, LoginValidation, LoadingAuthentication {
 
 	func success(_ token: String) {
 		print("Token: \(token)")
+		presenter.showProfile()
 	}
 
 	func failed(_ error: Any) {
