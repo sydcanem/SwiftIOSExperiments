@@ -9,11 +9,11 @@
 import Foundation
 import Auth0
 
-public struct Auth {
-	public var email: String
-	public var password: String
+struct Auth {
+	var email: String
+	var password: String
 
-	public init(email: String, password: String) {
+	init(email: String, password: String) {
 		self.email = email
 		self.password = password
 	}

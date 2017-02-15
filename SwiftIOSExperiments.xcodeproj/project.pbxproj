@@ -11,10 +11,9 @@
 		6794BD7C1E4D55920088400B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6794BD7B1E4D55920088400B /* Assets.xcassets */; };
 		6794BD8A1E4D55920088400B /* SwiftIOSExperimentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794BD891E4D55920088400B /* SwiftIOSExperimentsTests.swift */; };
 		6794BD951E4D55920088400B /* SwiftIOSExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794BD941E4D55920088400B /* SwiftIOSExperimentsUITests.swift */; };
-		6794BDA51E4D59E70088400B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794BDA41E4D59E70088400B /* Extensions.swift */; };
+		6794BDA51E4D59E70088400B /* LoginValidationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794BDA41E4D59E70088400B /* LoginValidationExtension.swift */; };
 		6794BDAA1E4DA8A70088400B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794BDA91E4DA8A70088400B /* AuthService.swift */; };
 		6794BDAC1E4DB1CE0088400B /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6794BDAB1E4DB1CE0088400B /* Auth0.plist */; };
-		67996F691E52DCC600C72E3A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996F681E52DCC600C72E3A /* Protocols.swift */; };
 		67996F741E52F21400C72E3A /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996F731E52F21400C72E3A /* RootRouter.swift */; };
 		67996F9F1E53426800C72E3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67996F9E1E53426800C72E3A /* LaunchScreen.storyboard */; };
 		67996FBC1E5346AC00C72E3A /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FAC1E5346AC00C72E3A /* LoginContract.swift */; };
@@ -26,6 +25,7 @@
 		67996FC21E5346AC00C72E3A /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FB81E5346AC00C72E3A /* ProfileRouter.swift */; };
 		67996FC31E5346AC00C72E3A /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67996FBA1E5346AC00C72E3A /* ProfileStoryboard.storyboard */; };
 		67996FC41E5346AC00C72E3A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FBB1E5346AC00C72E3A /* ProfileViewController.swift */; };
+		67996FC61E5430F600C72E3A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FC51E5430F600C72E3A /* LoginInteractor.swift */; };
 		752355202BB677E038F13F8F /* Pods_SwiftIOSExperiments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7BBC05F3053B54F587F22F /* Pods_SwiftIOSExperiments.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,10 +59,9 @@
 		6794BD901E4D55920088400B /* SwiftIOSExperimentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftIOSExperimentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6794BD941E4D55920088400B /* SwiftIOSExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIOSExperimentsUITests.swift; sourceTree = "<group>"; };
 		6794BD961E4D55920088400B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6794BDA41E4D59E70088400B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6794BDA41E4D59E70088400B /* LoginValidationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginValidationExtension.swift; sourceTree = "<group>"; };
 		6794BDA91E4DA8A70088400B /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		6794BDAB1E4DB1CE0088400B /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Auth0.plist; sourceTree = "<group>"; };
-		67996F681E52DCC600C72E3A /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		67996F731E52F21400C72E3A /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		67996F9E1E53426800C72E3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67996FAC1E5346AC00C72E3A /* LoginContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		67996FB81E5346AC00C72E3A /* ProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		67996FBA1E5346AC00C72E3A /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		67996FBB1E5346AC00C72E3A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		67996FC51E5430F600C72E3A /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginInteractor.swift; path = Modules/Login/Interactor/LoginInteractor.swift; sourceTree = "<group>"; };
 		894EC66566C4537D04F613C5 /* Pods_SwiftIOSExperimentsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftIOSExperimentsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA94A7D1EE75510568B34E13 /* Pods-SwiftIOSExperiments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIOSExperiments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIOSExperiments/Pods-SwiftIOSExperiments.debug.xcconfig"; sourceTree = "<group>"; };
 		C4C049046C705F2DDF289179 /* Pods-SwiftIOSExperiments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIOSExperiments.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIOSExperiments/Pods-SwiftIOSExperiments.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,10 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				67996F9D1E53425800C72E3A /* Base.lproj */,
-				67996F681E52DCC600C72E3A /* Protocols.swift */,
 				6794BD741E4D55920088400B /* AppDelegate.swift */,
 				67996F731E52F21400C72E3A /* RootRouter.swift */,
-				6794BDA41E4D59E70088400B /* Extensions.swift */,
+				67996FC81E54430300C72E3A /* Extensions */,
 				67996FA91E5346AC00C72E3A /* Modules */,
 				67996F7B1E52FFA000C72E3A /* Network */,
 				6794BD7B1E4D55920088400B /* Assets.xcassets */,
@@ -200,6 +199,7 @@
 		67996FAA1E5346AC00C72E3A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				67996FC71E54311500C72E3A /* Interactor */,
 				67996FAB1E5346AC00C72E3A /* Contract */,
 				67996FAD1E5346AC00C72E3A /* Presenter */,
 				67996FAF1E5346AC00C72E3A /* Router */,
@@ -274,6 +274,23 @@
 				67996FBB1E5346AC00C72E3A /* ProfileViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		67996FC71E54311500C72E3A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				67996FC51E5430F600C72E3A /* LoginInteractor.swift */,
+			);
+			name = Interactor;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		67996FC81E54430300C72E3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6794BDA41E4D59E70088400B /* LoginValidationExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A3D72DFD9AA243F165DCFDF8 /* Pods */ = {
@@ -488,15 +505,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				67996FC01E5346AC00C72E3A /* LoginViewController.swift in Sources */,
-				67996F691E52DCC600C72E3A /* Protocols.swift in Sources */,
 				67996FBC1E5346AC00C72E3A /* LoginContract.swift in Sources */,
 				67996FC11E5346AC00C72E3A /* ProfileContracts.swift in Sources */,
 				67996FBD1E5346AC00C72E3A /* LoginPresenter.swift in Sources */,
 				67996F741E52F21400C72E3A /* RootRouter.swift in Sources */,
 				67996FC41E5346AC00C72E3A /* ProfileViewController.swift in Sources */,
-				6794BDA51E4D59E70088400B /* Extensions.swift in Sources */,
+				6794BDA51E4D59E70088400B /* LoginValidationExtension.swift in Sources */,
 				6794BD751E4D55920088400B /* AppDelegate.swift in Sources */,
 				67996FBE1E5346AC00C72E3A /* LoginRouter.swift in Sources */,
+				67996FC61E5430F600C72E3A /* LoginInteractor.swift in Sources */,
 				6794BDAA1E4DA8A70088400B /* AuthService.swift in Sources */,
 				67996FC21E5346AC00C72E3A /* ProfileRouter.swift in Sources */,
 			);

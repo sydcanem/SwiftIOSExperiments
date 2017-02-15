@@ -27,25 +27,3 @@ extension LoginValidation {
 		return true
 	}
 }
-
-extension LoadingAuthentication where Self: UIViewController {
-	func authenticate(auth: Auth) {
-		spinner.startAnimating()
-
-		AuthService.authenticate(auth.email, auth.password,
-		                         completion: { [weak self] result in
-		  DispatchQueue.main.async {
-				switch result {
-				case .success(let credentials):
-					guard let idToken = credentials.idToken else { return }
-
-					self?.success(idToken)
-				case .failure(let error):
-					self?.failed(error)
-				}
-
-				self?.spinner.stopAnimating()
-			}
-		})
-	}
-}

@@ -17,9 +17,16 @@ class LoginRouter {
 		let view = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
 		let presenter = LoginPresenter()
 		let router = LoginRouter()
+		let interactor = LoginInteractor()
 
 		view.presenter = presenter
+
+		presenter.view = view
 		presenter.router = router
+		presenter.interactor = interactor
+
+		interactor.output = presenter
+
 		router.viewController = view
 
 		return view
