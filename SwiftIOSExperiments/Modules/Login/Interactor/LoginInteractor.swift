@@ -17,8 +17,9 @@ class LoginInteractor: LoginUseCase {
 			DispatchQueue.main.async {
 				switch result {
 				case .success(let credentials):
-					guard let idToken = credentials.idToken else { return }
+					guard let idToken = credentials.accessToken else { return }
 
+					AuthService.token = idToken
 					self?.output.authenticationSuccess(idToken)
 				case .failure(let error):
 					self?.output.authenticationFailed(error)

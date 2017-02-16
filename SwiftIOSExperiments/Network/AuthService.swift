@@ -6,7 +6,6 @@
 //  Copyright © 2017 James Santos. All rights reserved.
 //
 
-import Foundation
 import Auth0
 
 struct Auth {
@@ -20,6 +19,8 @@ struct Auth {
 }
 
 class AuthService {
+	static var token: String!
+
 	static func authenticate(_ email: String, _ password: String,
 	                         completion: @escaping (_ result: Result<Credentials>) -> Void) {
 		Auth0

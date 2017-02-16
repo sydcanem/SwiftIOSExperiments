@@ -20,10 +20,16 @@ extension LoginValidation {
 
 	// Password validation just trims the password for now
 	func isValidPassword(_ password: String?) -> Bool {
-		guard (password?.trimmingCharacters(in: .whitespacesAndNewlines)) != nil else {
-			return false
-		}
+		return password?.trimmingCharacters(in: .whitespacesAndNewlines) != nil
+	}
+}
 
-		return true
+extension LoginView where Self: UIViewController {
+	func startAnimating() {
+		self.spinner.startAnimating()
+	}
+
+	func stopAnimating() {
+		self.spinner.stopAnimating()
 	}
 }

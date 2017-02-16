@@ -10,12 +10,19 @@ import UIKit
 
 protocol LoginValidation {}
 
-protocol LoadingAuthentication {
+protocol LoadableView: class {
 	var spinner: UIActivityIndicatorView { get }
+
+	func startAnimating()
+	func stopAnimating()
+}
+
+protocol LoginView: LoadableView {
+	var presenter: LoginPresentation! { get set }
 }
 
 protocol LoginPresentation: class {
-	weak var view: UIViewController? { get set }
+	weak var view: LoginView? { get set }
 	var interactor: LoginUseCase! { get set }
 	var router: LoginRouter! { get set }
 
@@ -25,7 +32,7 @@ protocol LoginPresentation: class {
 
 protocol LoginInteractorOutput: class {
 	func authenticationSuccess(_ token: String)
-	func authenticationFailed(_ error: Any)
+	func authenticationFailed(_ error: Error)
 }
 
 protocol LoginUseCase: class {

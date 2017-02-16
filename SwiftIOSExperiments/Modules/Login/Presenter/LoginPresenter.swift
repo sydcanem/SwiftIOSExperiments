@@ -8,19 +8,12 @@
 
 import UIKit
 
-class LoginPresenter: LoginPresentation, LoadingAuthentication {
-	let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-
-	weak var view: UIViewController?
+class LoginPresenter: LoginPresentation {
+	weak var view: LoginView?
 	var router: LoginRouter!
 	var interactor: LoginUseCase!
 
-	func viewDidLoad() {
-		spinner.hidesWhenStopped = true
-		spinner.center = (view?.view.center)!
-
-		view?.view.addSubview(spinner)
-	}
+	func viewDidLoad() {}
 
 	func showProfile() {
 		router.presentProfile()
@@ -28,18 +21,19 @@ class LoginPresenter: LoginPresentation, LoadingAuthentication {
 
 	func authenticateUser(_ auth: Auth) {
 		interactor.authenticateUser(auth)
-		spinner.startAnimating()
+		view?.startAnimating()
 	}
 }
 
 extension LoginPresenter: LoginInteractorOutput {
 
 	func authenticationSuccess(_ token: String) {
-		spinner.stopAnimating()
 		router.presentProfile()
+		view?.stopAnimating()
 	}
 
-	func authenticationFailed(_ error: Any) {
-		print("Error: \(error)")
+	func authenticationFailed(_ error: Error) {
+		print("Error: \(error.localizedDescription)")
+		view?.stopAnimating()
 	}
 }

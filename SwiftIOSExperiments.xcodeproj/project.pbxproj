@@ -21,11 +21,14 @@
 		67996FBE1E5346AC00C72E3A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FB01E5346AC00C72E3A /* LoginRouter.swift */; };
 		67996FBF1E5346AC00C72E3A /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67996FB21E5346AC00C72E3A /* LoginStoryboard.storyboard */; };
 		67996FC01E5346AC00C72E3A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FB31E5346AC00C72E3A /* LoginViewController.swift */; };
-		67996FC11E5346AC00C72E3A /* ProfileContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FB61E5346AC00C72E3A /* ProfileContracts.swift */; };
+		67996FC11E5346AC00C72E3A /* ProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FB61E5346AC00C72E3A /* ProfileContract.swift */; };
 		67996FC21E5346AC00C72E3A /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FB81E5346AC00C72E3A /* ProfileRouter.swift */; };
 		67996FC31E5346AC00C72E3A /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67996FBA1E5346AC00C72E3A /* ProfileStoryboard.storyboard */; };
 		67996FC41E5346AC00C72E3A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FBB1E5346AC00C72E3A /* ProfileViewController.swift */; };
 		67996FC61E5430F600C72E3A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FC51E5430F600C72E3A /* LoginInteractor.swift */; };
+		67996FCC1E5447A800C72E3A /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FCB1E5447A800C72E3A /* ProfileInteractor.swift */; };
+		67996FCF1E544F8700C72E3A /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FCE1E544F8700C72E3A /* ProfileService.swift */; };
+		67996FD41E553C0500C72E3A /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996FD31E553C0500C72E3A /* ProfilePresenter.swift */; };
 		752355202BB677E038F13F8F /* Pods_SwiftIOSExperiments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7BBC05F3053B54F587F22F /* Pods_SwiftIOSExperiments.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,11 +72,14 @@
 		67996FB01E5346AC00C72E3A /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		67996FB21E5346AC00C72E3A /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		67996FB31E5346AC00C72E3A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		67996FB61E5346AC00C72E3A /* ProfileContracts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileContracts.swift; sourceTree = "<group>"; };
+		67996FB61E5346AC00C72E3A /* ProfileContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileContract.swift; sourceTree = "<group>"; };
 		67996FB81E5346AC00C72E3A /* ProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		67996FBA1E5346AC00C72E3A /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		67996FBB1E5346AC00C72E3A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		67996FC51E5430F600C72E3A /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginInteractor.swift; path = Modules/Login/Interactor/LoginInteractor.swift; sourceTree = "<group>"; };
+		67996FCB1E5447A800C72E3A /* ProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileInteractor.swift; path = Contract/ProfileInteractor.swift; sourceTree = "<group>"; };
+		67996FCE1E544F8700C72E3A /* ProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		67996FD31E553C0500C72E3A /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		894EC66566C4537D04F613C5 /* Pods_SwiftIOSExperimentsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftIOSExperimentsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA94A7D1EE75510568B34E13 /* Pods-SwiftIOSExperiments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIOSExperiments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIOSExperiments/Pods-SwiftIOSExperiments.debug.xcconfig"; sourceTree = "<group>"; };
 		C4C049046C705F2DDF289179 /* Pods-SwiftIOSExperiments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIOSExperiments.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIOSExperiments/Pods-SwiftIOSExperiments.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				6794BDA91E4DA8A70088400B /* AuthService.swift */,
+				67996FCE1E544F8700C72E3A /* ProfileService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -244,6 +251,8 @@
 		67996FB41E5346AC00C72E3A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				67996FCD1E5447BD00C72E3A /* Interactor */,
+				67996FD21E55373200C72E3A /* Presenter */,
 				67996FB51E5346AC00C72E3A /* Contract */,
 				67996FB71E5346AC00C72E3A /* Router */,
 				67996FB91E5346AC00C72E3A /* View */,
@@ -254,7 +263,7 @@
 		67996FB51E5346AC00C72E3A /* Contract */ = {
 			isa = PBXGroup;
 			children = (
-				67996FB61E5346AC00C72E3A /* ProfileContracts.swift */,
+				67996FB61E5346AC00C72E3A /* ProfileContract.swift */,
 			);
 			path = Contract;
 			sourceTree = "<group>";
@@ -291,6 +300,22 @@
 				6794BDA41E4D59E70088400B /* LoginValidationExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		67996FCD1E5447BD00C72E3A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				67996FCB1E5447A800C72E3A /* ProfileInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		67996FD21E55373200C72E3A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				67996FD31E553C0500C72E3A /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		A3D72DFD9AA243F165DCFDF8 /* Pods */ = {
@@ -506,16 +531,19 @@
 			files = (
 				67996FC01E5346AC00C72E3A /* LoginViewController.swift in Sources */,
 				67996FBC1E5346AC00C72E3A /* LoginContract.swift in Sources */,
-				67996FC11E5346AC00C72E3A /* ProfileContracts.swift in Sources */,
+				67996FC11E5346AC00C72E3A /* ProfileContract.swift in Sources */,
 				67996FBD1E5346AC00C72E3A /* LoginPresenter.swift in Sources */,
 				67996F741E52F21400C72E3A /* RootRouter.swift in Sources */,
 				67996FC41E5346AC00C72E3A /* ProfileViewController.swift in Sources */,
 				6794BDA51E4D59E70088400B /* LoginValidationExtension.swift in Sources */,
 				6794BD751E4D55920088400B /* AppDelegate.swift in Sources */,
+				67996FD41E553C0500C72E3A /* ProfilePresenter.swift in Sources */,
 				67996FBE1E5346AC00C72E3A /* LoginRouter.swift in Sources */,
 				67996FC61E5430F600C72E3A /* LoginInteractor.swift in Sources */,
+				67996FCC1E5447A800C72E3A /* ProfileInteractor.swift in Sources */,
 				6794BDAA1E4DA8A70088400B /* AuthService.swift in Sources */,
 				67996FC21E5346AC00C72E3A /* ProfileRouter.swift in Sources */,
+				67996FCF1E544F8700C72E3A /* ProfileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

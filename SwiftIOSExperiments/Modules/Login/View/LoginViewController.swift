@@ -8,8 +8,9 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, LoginValidation {
-	var presenter: LoginPresenter!
+class LoginViewController: UIViewController, LoginValidation, LoginView {
+	let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+	var presenter: LoginPresentation!
 
 	@IBOutlet var email: UITextField!
 	@IBOutlet var password: UITextField!
@@ -20,10 +21,15 @@ class LoginViewController: UIViewController, LoginValidation {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		presenter.viewDidLoad()
+
+		spinner.hidesWhenStopped = true
+		spinner.center = view.center
+
+		view.addSubview(spinner)
 	}
 
 	@IBAction func login(_ button: UIButton) {
-		if let email: String = email.text, let password: String = password.text {
+		if let email = email.text, let password: String = password.text {
 			if !isValidEmail(email) {
 				emailValidationMessage = "Invalid email address"
 			}
