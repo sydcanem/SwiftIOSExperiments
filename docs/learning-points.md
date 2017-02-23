@@ -20,7 +20,7 @@
   - [x] [Loading View Controllers](https://talk.objc.io/episodes/S01E03-loading-view-controllers)
 
 ## Threads
-  - [ ] [Tutorial](http://www.appcoda.com/grand-central-dispatch/)
+  - [x] [Tutorial](http://www.appcoda.com/grand-central-dispatch/)
 
 ## Swift 3.0
   - [x] Generics - Advanced Swift (Book)
